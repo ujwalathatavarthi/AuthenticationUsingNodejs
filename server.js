@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+const passportGoogle = require('./config/passport-google-oauth2-strategy');
 
 const app = express();
 

@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const passport = require('passport');
 
 //------------ Importing Controllers ------------//
 const authController = require('../controllers/authController')
@@ -39,5 +40,8 @@ router.post('/login', authController.loginHandle);
 
 //------------ Logout GET Handle ------------//
 router.get('/logout', authController.logoutHandle);
+
+router.get('/google',passport.authenticate('google',{scope: ['profile','email']}));
+router.get('/google/callback',passport.authenticate('google',{failureRedirect:'/auth/register',successRedirect: '/dashboard'}));
 
 module.exports = router;

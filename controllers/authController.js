@@ -89,7 +89,7 @@ exports.registerHandle = (req, res) => {
                 const mailOptions = {
                     from: '"Auth Admin" <nodejsa@gmail.com>', // sender address
                     to: email, // list of receivers
-                    subject: "Account Verification: NodeJS Auth ✔", // Subject line
+                    subject: "Account Verification for NodeJS Authentication App", // Subject line
                     generateTextFromHTML: true,
                     html: output, // html body
                 };
